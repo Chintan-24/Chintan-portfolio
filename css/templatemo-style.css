@@ -180,8 +180,8 @@ h1,h2,h3,h4,h5
   }
 #home h1
     {
-        border: 2px solid #3ccdd6;
-        color: #3ccdd6;
+        border: 2px solid #000000;
+        color: #000000;
         display: inline-block;
         letter-spacing: 6px;
         padding: 25px 35px;
