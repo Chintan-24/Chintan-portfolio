@@ -1,1 +1,3 @@
-# CB.github.io
+# Chintan Portfolio
+
+This is my portfolio showcase website.
