@@ -1,3 +1,36 @@
+::-moz-selection {
+  color: #fff;
+  background: #3ccdd6;
+}
+
+::selection {
+  color: #fff;
+  background: #3ccdd6;
+}
+
+@media only screen and (max-width: 768px) {
+  * {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
+}
+
 body {
   background: #000000;
   color: #999;
@@ -161,22 +194,54 @@ h5 {
 
 /* start home */
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url("../images/home-bg.jpg");
+  background: linear-gradient(
+      to bottom right,
+      rgba(22, 80, 83, 0.7),
+      rgba(2, 22, 22, 0.7)
+    ),
+    url("../images/desktop.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 120px;
   padding-bottom: 140px;
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  #home {
+    background: linear-gradient(rgba(22, 80, 83, 0.7), rgba(3, 31, 32, 0.7)),
+      url("../images/mobile-view.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 140px;
+    text-align: center;
+  }
+}
+
 #home h1 {
-  border: 2px solid #000000;
-  color: #000000;
+  border: 2px solid #44e3ee;
+  color: #44e3ee;
   display: inline-block;
   letter-spacing: 6px;
   padding: 25px 35px;
   margin: 30px 0;
+  box-shadow: 1.5px 2px 5px black;
+  text-shadow: 1.5px 2px 5px black;
 }
+@media only screen and (max-width: 600px) {
+  #home h1 {
+    border: 2px solid black;
+    color: black;
+    display: inline-block;
+    letter-spacing: 6px;
+    padding: 25px 35px;
+    margin: 30px 0;
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
+
 #home h2 {
   padding-bottom: 10px;
 }
@@ -239,6 +304,43 @@ h5 {
   padding: 15px 0;
   color: #3ccdd6;
 }
+/* animated progressbar */
+.anim-progress {
+  width: 100%;
+  height: 6px;
+  background: #e1e4e8;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.anim-progress-bar {
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #3ccdd6,
+    #007b84 17%,
+    #008690 34%,
+    #6ef5fe 51%,
+    #3ccdd6 68%,
+    #007b84 85%,
+    #008690
+  );
+  background-size: 300% 100%;
+  animation: progress-animation 2s linear infinite;
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
 #about .progress {
   border-radius: 4px;
   background: #ffffff;
@@ -271,6 +373,8 @@ h5 {
   padding-bottom: 30px;
 }
 #portfolio .portfolio-thumb {
+  height: 16.5rem;
+  width: 100%;
   overflow: hidden;
   position: relative;
   margin-bottom: 30px;
