@@ -92,10 +92,10 @@
             scrollBar: false,
 
             //scrolling
-            css3: true,
+            css3: false,
             scrollingSpeed: 700,
-            autoScrolling: true,
-            fitToSection: true,
+            autoScrolling: false,
+            fitToSection: false,
             easing: 'easeInOutCubic',
             easingcss3: 'ease',
             loopBottom: false,
