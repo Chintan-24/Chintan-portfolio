@@ -268,7 +268,10 @@
               class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp"
               data-wow-delay="0.6s"
             >
-              <form role="form" method="post" action="#">
+                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+  <p class="hidden">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  </p>
                 <input
                   name="name"
                   type="text"
