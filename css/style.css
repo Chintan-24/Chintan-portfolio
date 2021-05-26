@@ -486,6 +486,16 @@ footer {
 footer hr {
   width: 100px;
 }
+
+footer a{
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all .2s;
+}
+footer a:hover{
+  text-decoration: none;
+  color: white;
+}
 /* end footer */
 
 /* start social icon */
