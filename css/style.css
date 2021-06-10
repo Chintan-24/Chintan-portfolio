@@ -400,9 +400,23 @@ h5 {
   background: #1a1a1a;
   text-align: center;
 }
-#portfolio h2 {
-  padding-bottom: 30px;
+
+.project-link-wrapper {
+  margin: 10px 0 40px 0;
 }
+
+.project-link{
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: all .2s;
+}
+
+.project-link:hover{
+  text-decoration: none;
+  color: white;
+}
+
 #portfolio .portfolio-thumb {
   height: 16.5rem;
   width: 100%;
